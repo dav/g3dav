@@ -17,6 +17,7 @@ DerivedData/
 # SwiftPM
 .build/
 Package.resolved
+.swiftpm/
 
 # Vim swap
 *.swp
