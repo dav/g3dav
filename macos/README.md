@@ -8,6 +8,20 @@ This folder contains a SwiftUI macOS recreation of the original g3dav app.
 2. Select the `G3DAVApp` scheme.
 3. Run the app.
 
+## Build an app bundle
+
+Run the helper script to produce a `.app` you can drop into `/Applications`:
+
+```bash
+./macos/build_app.sh
+```
+
+The app bundle is created at `macos/build/G3DAVApp.app`.
+
+## App icon
+
+Place an `icns` file at `macos/assets/G3DAVApp.icns` to embed a custom icon in the app bundle.
+
 ## Controls
 
 - Drag with the left mouse button to rotate the model.
