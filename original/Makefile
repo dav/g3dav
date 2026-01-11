@@ -1,0 +1,23 @@
+# Generated automatically from Makefile.in by configure.
+
+.PHONY: realclean
+.PHONY: clean
+
+VERSION=$(shell perl -ne 'print $$1 if /VERSION\s+"([^"]+)"/;' src/g3dav.c)
+
+all:
+	cd src && make
+
+realclean: clean
+	cd src && make realclean
+	rm config.cache config.log config.status Makefile
+
+clean:
+	cd src && make clean
+	rm config.cache config.log config.status
+
+dist:
+	tar czvf ../g3dav-$(VERSION).tar.gz -C .. g3dav/
+
+install:
+	cp src/g3dav /usr/local/bin/g3dav

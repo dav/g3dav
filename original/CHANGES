@@ -1,0 +1,8 @@
+CHANGES
+
+July 1 1999
+- added code to translate center of model to origin and then alter worldspace
+  to center on origin
+  this is so the model will rotate around its center, in the middle of the view
+- added optional display of rotational and origin (0,0,0) axes
+

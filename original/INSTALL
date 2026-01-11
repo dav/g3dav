@@ -1,0 +1,13 @@
+
+To install you must have GTK+ installed and configured correctly.
+
+Then run ./configure; make; make install
+
+'make install' attempts to put the executable g3dav into
+/usr/local/bin, so you will probably have to be root at
+that point.
+
+This has been tested only on the following systems so far:
+
+* Linux 2.2.5 Redhat 5.2, gtk+ 1.2.1, glib 1.2.1, gcc 2.7.2.3
+* Solaris 2.6, gtk+ 1.2.2, glib 1.2, gcc 2.8.1

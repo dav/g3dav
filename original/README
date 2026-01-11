@@ -1,0 +1,101 @@
+
+See http://www.danger-island.com/~dav/g3dav/ for the latest
+information. I'll append the text of this page below also, but
+it may not be as up-to-date. 
+
+See INSTALL in this distro for install information
+
+--------------------------------------------------------------------------
+
+g3dav: GNU 3-D Anaglyphic Viewer
+
+3-D for the people 
+
+G3dav is a Linux GTK+ application which will allow you to view and rotate 
+3 Dimensional objects using cheap anaglyphic (red-cyan) glasses. This 
+application is currently in a usable alpha-state, and I intend to add many
+features soon. This is free software and covered by the GNU Public License. 
+
+You may currently load images from a file in Wavefront Object format. There 
+is also the beginnings of support for molecular PDB files and 3 value data 
+set CSV files. 
+
+Anaglyphic glasses may be found in various places, if anyone dicovers an 
+online source for ordering them, please tell me so I may share the info 
+here.
+
+Install 
+
+1. Unpack the file with 
+
+   tar xzvf <filename> 
+   
+   and this will create a ./g3dav directory. 
+   
+2.Enter this directory and run the typical 
+
+   ./configure; make; make install
+
+This is my first attempt at using ./configure and Makefile.in. Please 
+correct me if you see something I am doing wrong. 
+
+Use The basic concept is to don a pair of anaglyphic glasses, load a 3D 
+object file and use your mouse to rotate the object. The only object file 
+with solid support is Wavefront Object format. A couple of .obj files are
+included in the ./g3dav directory and it is trivial to create more. There
+is preliminary support for .pdb (molecule) files and .csv (comma 
+separated value) files, but this is still under development. The latter 
+is intended for data visualization. 
+
+You may need to adjust the red/cyan colors to match your glasses' filters,
+or you may need to adjust the default anaglyphic parameters to get the 
+best 3-D effect. Menu/Toolbar option are provided for these tasks. 
+
+Support 
+
+Please join the mailing list for support. To join the list send email to
+
+g3dav@danger-island.com 
+
+with the subject of 
+
+subscribe g3dav
+
+
+
+Future Directions 
+
+I have a number of planned enhancements g3dav and other ticklish urges. 
+Here are a few: 
+
+- Rewrite as a GNOME application and possibly KDE and possibly switch 
+  to C++.
+- Finish and enhance CSV data visualization 
+- Add ability to create and edit OBJ files 
+- Add german language support 
+
+- Create a 3D game. Something like battlezone or a 1st person asteroids 
+  would be cool. But I'll probably start with a 3D nightdriver. 
+
+History 
+
+G3dav began almost a decade ago when I read a paper published in the 
+academic journal "Computers in Physics" which outlined the algorithm 
+for 3D anaglyphical transformation. This became a Turbo C++ DOS 
+program which simply rendered the results of several chaos functions 
+statically on the screen (no user interaction). I'll make this program 
+available too, if I ever find the executable or source code again :). 
+
+Next, when Sun's JDK 1.0 came out, I took Sun's example model viewer 
+applet and merged it with my anaglyphic code . Sun's applet allowed 
+the user to rotate a 3D model as a projection onto the 2D screen, so
+now I had user interaction. 
+
+It languished in this manner for many years until recently (end of June 
+1999) when I decided I wanted to create a GNOME open source anaglyphic 
+tool. 
+
+Contact: email dav@danger-island.com 
+                                                                       
+
+
