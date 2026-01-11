@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>g3dav WebGL</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header>
+        <div>
+          <h1>g3dav WebGL</h1>
+          <p>Raw WebGL anaglyphic viewer</p>
+        </div>
+        <div class="actions">
+          <input id="fileInput" type="file" accept=".obj,.pdb,.csv" />
+          <select id="sampleSelect"></select>
+          <button id="loadSample">Load sample</button>
+        </div>
+      </header>
+
+      <main>
+        <section class="panel">
+          <h2>Controls</h2>
+
+          <div class="row">
+            <label>Red</label>
+            <input id="redColor" type="color" value="#ff0000" />
+          </div>
+          <div class="row">
+            <label>Cyan</label>
+            <input id="cyanColor" type="color" value="#00ffff" />
+          </div>
+
+          <div class="row">
+            <label>Eye distance</label>
+            <input id="eyeDistance" type="range" min="1" max="20" step="0.1" value="5" />
+            <span id="eyeValue">5.0</span>
+          </div>
+
+          <div class="row">
+            <label>View distance</label>
+            <input id="viewDistance" type="range" min="10" max="200" step="1" value="50" />
+            <span id="viewValue">50</span>
+          </div>
+
+          <div class="row">
+            <label>Show origin axes</label>
+            <input id="originAxes" type="checkbox" />
+          </div>
+
+          <div class="row">
+            <label>Show rotation axes</label>
+            <input id="rotationAxes" type="checkbox" />
+          </div>
+
+          <div class="row">
+            <button id="resetView">Reset view</button>
+            <button id="zoomIn">Zoom in</button>
+            <button id="zoomOut">Zoom out</button>
+          </div>
+
+          <p class="hint">Drag to rotate. Scroll to zoom.</p>
+        </section>
+
+        <section class="canvas-wrap">
+          <canvas id="glCanvas"></canvas>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

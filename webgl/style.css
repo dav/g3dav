@@ -1,0 +1,141 @@
+:root {
+  color-scheme: light;
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  background: #0e0f10;
+  color: #f5f4f2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1a1d22, #0b0c0e 60%);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 24px;
+  gap: 24px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 24px;
+  border-radius: 16px;
+  background: rgba(22, 24, 28, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: 0.04em;
+}
+
+header p {
+  margin: 4px 0 0;
+  color: #9aa4b2;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.actions button,
+.panel button {
+  background: #f04d2f;
+  border: none;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.actions button:hover,
+.panel button:hover {
+  background: #ff6647;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 24px;
+  flex: 1;
+}
+
+.panel {
+  padding: 20px;
+  background: rgba(20, 22, 26, 0.92);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.panel h2 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  letter-spacing: 0.06em;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 12px;
+}
+
+.row span {
+  color: #9aa4b2;
+  font-size: 12px;
+}
+
+.row input[type="range"] {
+  grid-column: 1 / -1;
+}
+
+.canvas-wrap {
+  position: relative;
+  background: #000;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+#glCanvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hint {
+  font-size: 12px;
+  color: #9aa4b2;
+}
+
+@media (max-width: 900px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .actions {
+    flex-wrap: wrap;
+  }
+}
